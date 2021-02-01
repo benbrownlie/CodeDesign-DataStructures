@@ -1,4 +1,3 @@
-#include <iostream>
 #include "ShopKeep.h"
 #include "DynamicArray.h"
 
@@ -37,18 +36,13 @@ T add(T lhs, B rhs)
 
 int main()
 {
-	//Create a new array
-	int test[5] = { 2,3,1,4,5 };
-	//Print array
-	printArray(test, 5);
-	//Sort array
-	sortArray(test, 5);
-	//Print array
-	printArray(test, 5);
-
-	//auto sum = add<int, int>(3.565f, 3.6474f);
-
-	ShopKeep<int, 5> potionSellah = ShopKeep<int,5>();
-
+	DynamicArray<int> test = DynamicArray<int>();
+	test.addItem(5);
+	test.addItem(3);
+	test.addItem(2);
+	test.addItem(4);
+	test.addItem(1);
+	test.sortItems();
+	test.print();
 	system("pause");
 }
